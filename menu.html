@@ -41,27 +41,23 @@
     <!-- 🍔 BOUTON BURGER (mobile uniquement) -->
     <!-- 👉 c'est lui qui déclenche le menu -->
     <button onclick="toggleMenu()" class="md:hidden text-3xl">
-        ☰
+        <span id="burgerIcon">☰</span>
     </button>
 
 
     </header>
 
-    <!-- ========================= -->
-    <!-- 📱 MENU MOBILE -->
-    <!-- ========================= -->
-    <!-- 👉 caché par défaut avec "hidden" -->
-    <div id="mobileMenu" class="hidden bg-black/90 text-center py-6 space-y-4">
-
-    <a href="index.html" class="block hover:text-orange-400">Accueil</a>
-    <a href="menu.html" class="block hover:text-orange-400">Menu</a>
-    <a href="about.html" class="block hover:text-orange-400">À propos</a>
-    <a href="contact.html" class="block hover:text-orange-400">Contact</a>
-
-    <button class="bg-orange-500 px-6 py-2 rounded-lg hover:bg-orange-600">
-        Commander
-    </button>
-
+    <!-- MENU MOBILE (Déroulant fluide) -->
+    <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-900 border-b border-gray-800 md:hidden">
+        <div class="flex flex-col items-center py-6 space-y-4 font-medium">
+            <a href="index.html" class="hover:text-orange-400 transition">Accueil</a>
+            <a href="menu.html" class="hover:text-orange-400 transition">Menu</a>
+            <a href="apropos.html" class="hover:text-orange-400 transition">À propos</a>
+            <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
+            <button class="bg-orange-500 px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition w-3/4 max-w-xs">
+                Commander
+            </button>       
+        </div>
     </div>
 
     <!-- titre -->
@@ -178,6 +174,23 @@
             * Tous nos burgers sont préparés avec ingrédients frais et de qualité. * 
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("burgerIcon");
+            
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-96");
+                icon.textContent = "✕";
+            } else {
+                menu.classList.remove("max-h-96");
+                menu.classList.add("max-h-0");
+                icon.textContent = "☰";
+            }
+        }
+    </script>
 
     
 </body>

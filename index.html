@@ -3,164 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍔BurgerHouse</title>
+    <title>🍔 BurgerHouse</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
+        body { font-family: 'Poppins', sans-serif; }
     </style>
-    </head>
-
-    <body class="bg-[#0f172a] text-white">
-
 </head>
-<body class="class="bg-[#0f172a] text-white">
+<body class="bg-[#0f172a] text-white">
 
-    <header class="flex items-center justify-between px-8 py-4 border-b border-gray-700">
-
+    <!-- HEADER -->
+    <header class="flex items-center justify-between px-8 py-4 border-b border-gray-700 relative z-50 bg-[#0f172a]">
         <div class="flex items-center gap-2 text-xl font-bold">
-            🍔BurgerHouse
+            🍔 BurgerHouse
         </div>
 
-            <nav class="hidden md:flex gap-8 text-gray-300">
-                <a href="index.html" class="bg-[#0f172a] px-5 py-2 rounded-lg hover:bg-orange-600 transition">Accueil </a>
-                <a href="menu.html" class="bg-[#0f172a] px-5 py-2 rounded-lg hover:bg-orange-600 transition">Menu</a>
-                <a href="apropos.html" class="bg-[#0f172a] px-5 py-2 rounded-lg hover:bg-orange-600 transition">À propos</a>
-                <a href="contact.html" class="bg-[#0f172a] px-5 py-2 rounded-lg hover:bg-orange-600 transition">Contact</a>
-            </nav>
+        <nav class="hidden md:flex gap-6 text-gray-300">
+            <a href="index.html" class="px-4 py-2 rounded-lg hover:text-orange-500 hover:bg-slate-800 transition">Accueil</a>
+            <a href="menu.html" class="px-4 py-2 rounded-lg hover:text-orange-500 hover:bg-slate-800 transition">Menu</a>
+            <a href="apropos.html" class="px-4 py-2 rounded-lg hover:text-orange-500 hover:bg-slate-800 transition">À propos</a>
+            <a href="contact.html" class="px-4 py-2 rounded-lg hover:text-orange-500 hover:bg-slate-800 transition">Contact</a>
+        </nav>
 
-        <button class="hidden md:block bg-orange-500 px-5 py-2 rounded-lg hover:bg-orange-600 transition">
+        <button class="hidden md:block bg-orange-500 px-5 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
             Commander
         </button>
 
-    <!-- 🍔 BOUTON BURGER (mobile uniquement) -->
-    <!-- 👉 c'est lui qui déclenche le menu -->
-    <button onclick="toggleMenu()" class="md:hidden text-3xl">
-        ☰
-    </button>
-
+        <!-- Bouton Burger (Mobile) -->
+        <button onclick="toggleMenu()" class="md:hidden text-3xl focus:outline-none p-2">
+            <span id="burgerIcon">☰</span>
+        </button>
     </header>
 
-    <!-- ========================= -->
-    <!-- 📱 MENU MOBILE -->
-    <!-- ========================= -->
-    <!-- 👉 caché par défaut avec "hidden" -->
-    <div id="mobileMenu" class="hidden bg-black/90 text-center py-6 space-y-4">
-
-    <a href="index.html" class="block hover:text-orange-400">Accueil</a>
-    <a href="menu.html" class="block hover:text-orange-400">Menu</a>
-    <a href="apropos.html" class="block hover:text-orange-400">À propos</a>
-    <a href="contact.html" class="block hover:text-orange-400">Contact</a>
-
-    <button class="bg-orange-500 px-6 py-2 rounded-lg hover:bg-orange-600">
-        Commander
-    </button>
-
+    <!-- MENU MOBILE (Déroulant fluide) -->
+    <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-900 border-b border-gray-800 md:hidden">
+        <div class="flex flex-col items-center py-6 space-y-4 font-medium">
+            <a href="index.html" class="hover:text-orange-400 transition">Accueil</a>
+            <a href="menu.html" class="hover:text-orange-400 transition">Menu</a>
+            <a href="apropos.html" class="hover:text-orange-400 transition">À propos</a>
+            <a href="contact.html" class="hover:text-orange-400 transition">Contact</a>
+            <button class="bg-orange-500 px-6 py-2 rounded-lg font-semibold hover:bg-orange-600 transition w-3/4 max-w-xs">
+                Commander
+            </button>
+        </div>
     </div>
 
-
-    <!-- 🎯 HERO -->
-<section class="min-h-screen flex items-center px-8">
-
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center px-8">
         <div class="grid md:grid-cols-2 gap-10 items-center w-full max-w-6xl mx-auto">
-
-    <!-- TEXTE -->
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight">
                     Découvrez <br>Nos <span class="text-orange-500">Délicieux Burgers</span>
                 </h1>
-
                 <p class="mt-4 text-gray-400">
                     Les meilleurs burgers de la ville, à portée de main !
                 </p>
-
-                <button class="mt-6 bg-orange-500 px-6 py-3 rounded-lg hover:bg-orange-600 transition">
+                <button class="mt-6 bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
                     Voir le Menu
                 </button>
             </div>
-
-    <!-- IMAGE -->
-
             <div>
-                <img src="images/WhatsApp Image 2026-03-31 at 16.37.21.jpeg" class="w-full max-w-md mx-auto">
+                <img src="images/WhatsApp Image 2026-03-31 at 16.37.21.jpeg" alt="Burger Principal" class="w-full max-w-md mx-auto rounded-xl">
             </div>
         </div>
+    </section>
 
-</section>
-
-    <!-- 🍔 SECTION SPÉCIALITÉS -->
+    <!-- SECTION SPÉCIALITÉS -->
     <section class="py-16 px-8">
-
-    <!-- TITRE -->
         <div class="flex items-center justify-center gap-4 mb-12">
             <div class="h-[1px] w-20 bg-gray-600"></div>
             <h2 class="text-2xl font-semibold">Nos Spécialités</h2>
             <div class="h-[1px] w-20 bg-gray-600"></div>
         </div>
 
-    <!-- CARTES -->
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-    <!-- CARD -->
             <div class="bg-[#1e293b] p-6 rounded-xl text-center border border-gray-700 hover:scale-105 transition">
-                <img src="images/img1.jpeg" alt="burger">
+                <img src="images/img1.jpeg" alt="Classic Burger" class="w-full h-48 object-cover rounded-lg">
                 <h3 class="text-xl font-semibold mb-2 pt-6">Classic Burger</h3>
-                <p class="text-gray-400 text-sm">
-                    Le traditionnel, comme vous l'aimez.
-                </p>
+                <p class="text-gray-400 text-sm">Le traditionnel, comme vous l'aimez.</p>
             </div>
-
-    <!-- CARD -->
             <div class="bg-[#1e293b] p-6 rounded-xl text-center border border-gray-700 hover:scale-105 transition">
-                <img src="images/img2.jpeg" alt="burger">
+                <img src="images/img2.jpeg" alt="BBQ Burger" class="w-full h-48 object-cover rounded-lg">
                 <h3 class="text-xl font-semibold mb-2 pt-6">BBQ Burger</h3>
-                <p class="text-gray-400 text-sm">
-                    Savoureux et plein de saveurs.
-                </p>
-
+                <p class="text-gray-400 text-sm">Savoureux et plein de saveurs.</p>
             </div>
-
-    <!-- CARD -->
             <div class="bg-[#1e293b] p-6 rounded-xl text-center border border-gray-700 hover:scale-105 transition">
-                <img src="images/img3.jpeg" alt="burger">
+                <img src="images/img3.jpeg" alt="Veggie Burger" class="w-full h-48 object-cover rounded-lg">
                 <h3 class="text-xl font-semibold mb-2 pt-6">Veggie Burger</h3>
-                <p class="text-gray-400 text-sm">
-                    100% végétarien et délicieux.
-                </p>
+                <p class="text-gray-400 text-sm">100% végétarien et délicieux.</p>
             </div>
         </div>
+    </section>
 
-</section>
-<!-- 🔻 FOOTER -->
+    <!-- FOOTER -->
     <footer class="border-t border-gray-700 py-10 text-center">
-
-                <p class="text-gray-400 mb-6">
-                    © 2026 BurgerHouse. Tous droits réservés.
-                </p>
-            <div class="flex justify-center gap-10 text-gray-300">
-                <img src="images/facebook (2).png" class="w-7 h-7  hover:scale-105 transition" />
-                <img src="images/instagram.png" class="w-7 h-7 hover:scale-105 transition" />
-            </div>
-
+        <p class="text-gray-400 mb-6">© 2026 BurgerHouse. Tous droits réservés.</p>
+        <div class="flex justify-center gap-6 text-gray-300">
+            <img src="images/facebook (2).png" alt="Facebook" class="w-7 h-7 hover:scale-110 transition cursor-pointer" />
+            <img src="images/instagram.png" alt="Instagram" class="w-7 h-7 hover:scale-110 transition cursor-pointer" />
+        </div>
     </footer>
 
-    <!-- ========================= -->
-    <!-- ⚙️ SCRIPT (OBLIGATOIRE) -->
-    <!-- ========================= -->
-    <!-- 👉 toujours juste avant </body> -->
+    <!-- SCRIPT JS -->
     <script>
-    function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-
-      // 👉 ajoute ou enlève "hidden"
-        menu.classList.toggle("hidden");
-    }
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("burgerIcon");
+            
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-96");
+                icon.textContent = "✕";
+            } else {
+                menu.classList.remove("max-h-96");
+                menu.classList.add("max-h-0");
+                icon.textContent = "☰";
+            }
+        }
     </script>
-
-    
 </body>
 </html>
