@@ -5,6 +5,8 @@ Site vitrine pour un restaurant de burgers, avec un design sombre et moderne. R�
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+🔗 **[Voir le site en direct](https://veben-cmyk.github.io/Burger-site/)**
+
 ## 🖼️ Aperçu
 
 ![Aperçu de BurgerHouse](images/preview.png)
